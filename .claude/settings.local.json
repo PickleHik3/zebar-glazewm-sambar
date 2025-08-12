@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b C:UsersAmalVajdan.glzr)",
+      "Bash(dir)",
+      "Bash(dir:*)",
+      "Bash(Get-ChildItem -Recurse -Force)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(Get-ChildItem -Recurse -Force \"C:\\Users\\AmalVajdan\\.glzr\\zebar\")",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(git clone:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(cp:*)",
+      "Bash(git init:*)"
+    ],
+    "deny": []
+  }
+}

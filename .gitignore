@@ -1,0 +1,21 @@
+# Zebar specific
+zebar/errors.log
+zebar/*/node_modules/
+zebar/*/.svelte-kit/
+zebar/*/dist/
+zebar/*/build/
+
+# GlazeWM logs
+glazewm/errors.log
+
+# OS specific
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.temp
