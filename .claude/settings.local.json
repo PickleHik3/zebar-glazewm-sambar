@@ -14,7 +14,10 @@
       "Bash(npm install)",
       "Bash(npm run build:*)",
       "Bash(cp:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(powershell:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
