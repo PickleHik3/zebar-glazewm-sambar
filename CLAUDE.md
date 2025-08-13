@@ -13,6 +13,8 @@ This is a Windows desktop environment configuration using GlazeWM (tiling window
 ## Key Files
 - `glazewm/config.yaml` - Primary window manager configuration
 - `zebar/settings.json` - Status bar startup configuration  
+- `zebar/personalized-zebar/` - **Current active theme** - Customized neobrutal theme with numbered workspaces
+- `zebar/personalized-zebar-backup/` - **Stable backup** of working personalized configuration
 - `zebar/personal-rose-pine-base/` - Personal Rose Pine theme (HTML/CSS/JSON)
 - `zebar/dotfile-bar/` - Original working theme (backup)
 - `research-configs/` - Collection of cloned configuration repositories
@@ -66,10 +68,21 @@ Applications are automatically routed to appropriate workspaces:
 - Creative/Office apps → Workspace 1 (primary monitor)
 
 ## Theme Configuration
+
+### GlazeWM Styling
 - **Focused border**: `#8839ef` (purple)
 - **Unfocused border**: `#babbf1` (light purple)  
 - **Transparency**: 85% opacity for non-focused windows
 - **Gaps**: 50px top (status bar space), 15px others
+
+### Zebar Theme Features (personalized-zebar)
+- **Layout**: CSS Grid (3 equal columns) prevents center shifting when media appears
+- **Workspace indicators**: Numbered squares (1,2,3,4,5) with colored backgrounds and glow effects
+- **Color scheme**: Rose Pine with workspace 3 using `--rp-rose` for better visibility
+- **App icons**: 1rem size with cyan glow for focused apps (`--rp-foam` color with text-shadow)
+- **Widget consistency**: All groups use consistent heights with `right-group-element` class
+- **Media widget**: Integrated with same styling as other components
+- **Removed widgets**: Audio device and battery widgets removed for cleaner appearance
 
 ## Development Workflow & Best Practices
 

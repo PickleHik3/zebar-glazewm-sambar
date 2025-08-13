@@ -17,7 +17,14 @@
       "Bash(git init:*)",
       "Bash(powershell:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git --version)",
+      "Bash(gh:*)",
+      "Bash(git config:*)",
+      "Bash(git remote add:*)",
+      "Bash(git remote remove:*)",
+      "Bash(xcopy:*)",
+      "Bash(git reset:*)"
     ],
     "deny": []
   }
