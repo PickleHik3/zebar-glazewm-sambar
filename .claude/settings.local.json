@@ -24,7 +24,9 @@
       "Bash(git remote add:*)",
       "Bash(git remote remove:*)",
       "Bash(xcopy:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)"
     ],
     "deny": []
   }
