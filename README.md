@@ -1,4 +1,4 @@
-# GlazeWM & Zebar Configuration
+# GlazeWM & Zebar Config sync
 
 Optimized GlazeWM (tiling window manager) and Zebar (status bar) configuration for dual-monitor Windows setups.
 
@@ -35,20 +35,6 @@ Local only (not in git):
 └── research-configs/          # Research and reference configurations
 ```
 
-## 🚀 Installation
-
-### **📦 [Complete Installation Guide](INSTALL.md)**
-
-```
-
-### Prerequisites
-- **GlazeWM**: [Download here](https://github.com/glzr-io/glazewm/releases)
-- **Zebar**: [Download here](https://github.com/glzr-io/zebar/releases)
-- **Node.js**: [Download here](https://nodejs.org/) (Required for theme building)
-- **Git**: [Download here](https://git-scm.com/downloads)
-
-**⚠️ Important**: Simply copying files won't work! The Svelte theme needs `npm install` and `npm run build`. See [INSTALL.md](INSTALL.md) for details.
-
 ## ⚙️ Configuration Details
 
 ### Workspace Architecture
@@ -68,32 +54,6 @@ Applications are automatically routed to appropriate workspaces:
 - **Development tools** → Workspace 1 (primary monitor)
 - **Email/communication** → Laptop workspace
 - **Creative/Office apps** → Workspace 1 (primary monitor)
-
-## 🔧 Development
-
-### Theme Development Commands
-```bash
-# Zebar theme development (Svelte-based themes like personalized-zebar)
-cd zebar/personalized-zebar
-npm run dev          # Start development server with hot reload
-npm run build        # Build theme for production
-npm run preview      # Preview built theme
-```
-
-### Testing Configuration Changes
-```bash
-# Check configuration syntax
-type glazewm\errors.log     # Check GlazeWM config parsing errors
-type zebar\errors.log       # Check Zebar widget/theme errors
-
-# Restart services (via keybindings in WM)
-# alt+shift+r - Restart GlazeWM to apply config changes
-```
-
-## 📋 Requirements
-
-- **Windows 10/11**: Required for GlazeWM
-- **Node.js**: For theme development (optional)
 
 ## 📝 Documentation
 
