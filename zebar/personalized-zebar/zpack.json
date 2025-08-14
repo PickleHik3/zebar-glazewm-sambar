@@ -9,7 +9,7 @@
   "widgets": [
     {
       "name": "bar",
-      "htmlPath": "./build/index.html",
+      "htmlPath": "./index.html",
       "zOrder": "normal",
       "shownInTaskbar": false,
       "focused": true,

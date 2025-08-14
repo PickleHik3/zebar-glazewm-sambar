@@ -26,7 +26,8 @@
       "Bash(xcopy:*)",
       "Bash(git reset:*)",
       "Bash(git push:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "WebSearch"
     ],
     "deny": []
   }

@@ -1,9 +1,15 @@
+# Local directories not tracked in git
+archived-themes/
+custom-glazewm-configs/
+
 # Zebar specific
 zebar/errors.log
 zebar/*/node_modules/
 zebar/*/.svelte-kit/
 zebar/*/dist/
 zebar/*/build/
+zebar/personalized-zebar/_app/immutable/
+zebar/personalized-zebar-backup/_app/immutable/
 
 # GlazeWM logs
 glazewm/errors.log

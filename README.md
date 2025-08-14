@@ -1,157 +1,108 @@
-# Complete Zebar Theme Collection with GlazeWM Configuration
+# GlazeWM & Zebar Configuration
 
-A comprehensive collection of advanced Zebar themes with optimized GlazeWM configuration for dual-monitor Windows setups.
+Optimized GlazeWM (tiling window manager) and Zebar (status bar) configuration for dual-monitor Windows setups.
 
-## 🎨 Included Themes
+## 🎯 Current Active Configuration
 
-### 1. **Personal Rose Pine Base** (`personal-rose-pine-base/`)
-- Custom Rose Pine theme with 15% height reduction
-- Proper window management configuration
-- Purple-themed styling with transparency effects
-
-### 2. **Adrian Karlen Rose Pine** (`adriankarlen-rose-pine/`)
-- Authentic Rose Pine theme adapted to modern zpack format
-- Original styling with optimized window behavior
-- Minimal and elegant design
-
-### 3. **Neobrutal Zebar** (`neobrutal-zebar/`)
+### **Personalized Zebar Theme** (`personalized-zebar/`)
 - **Framework**: Svelte + Tailwind CSS
-- **Features**: 4 themes (Rosé Pine, Catppuccin, Nord, Material)
-- **Advanced**: CSS variable configuration, process icons, power controls
-- **Build**: Pre-built and ready to use
+- **Features**: Numbered workspace indicators, Rose Pine color scheme, enhanced media controls
+- **Layout**: CSS Grid (3 equal columns) prevents center shifting
+- **Workspace indicators**: Colored squares (1,2,3,4,5) with glow effects
+- **App icons**: 1rem size with cyan glow for focused apps
+- **Widget consistency**: All groups use consistent heights
 
-### 4. **Quiet Velvet** (`quiet-velvet/`)
-- **Framework**: React + Vite
-- **Features**: Spotify integration, Google Search widget, Settings system
-- **Advanced**: Active app highlighting, taskbar previews, shortcut widgets
-- **Build**: Pre-built with config template
+### **GlazeWM Configuration** (`glazewm/`)
+- **Dual-monitor optimized**: Primary monitor (workspaces 1-4), Laptop workspace
+- **Purple theme**: Focused border `#9bdbf9`, unfocused `#7d5e8c`
+- **Transparency**: 70% opacity for non-focused windows
+- **Application routing**: Intelligent workspace assignment for productivity
+- **Keybindings**: Arrow-based navigation with resize mode
 
-### 5. **Ajay Professional** (`ajay-professional/`)
-- **Framework**: React (ES6 modules)
-- **Features**: 11 system providers, shell script integration
-- **Advanced**: System utility launching, threshold-based styling, network monitoring
-- **Scripts**: VBS/PowerShell/AHK automation included
+## 📁 Directory Structure
 
-## 🚀 Installation on Home PC
+```
+├── glazewm/                    # GlazeWM window manager configuration
+│   └── config.yaml            # Main configuration file
+├── zebar/                     # Zebar status bar configuration
+│   ├── personalized-zebar/    # Current active theme (Svelte-based)
+│   ├── personalized-zebar-backup/ # Stable backup configuration
+│   └── settings.json          # Zebar startup configuration
+└── custom-glazewm-configs/    # Working directory for custom configurations
+
+Local only (not in git):
+├── archived-themes/           # Collection of alternative themes
+└── research-configs/          # Research and reference configurations
+```
+
+## 🚀 Installation
 
 ### Prerequisites
 1. **GlazeWM**: Download from [GitHub](https://github.com/glzr-io/glazewm/releases)
 2. **Zebar**: Download from [GitHub](https://github.com/glzr-io/zebar/releases)
-3. **Git**: For cloning this repository
 
 ### Quick Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/zebar-glazewm-config.git
-
-# Navigate to the directory
-cd zebar-glazewm-config
+git clone https://github.com/YOUR_USERNAME/glazewm-zebar-config.git
 
 # Copy to GlazeWM/Zebar directory (Windows)
 xcopy /E /I . "%USERPROFILE%\.glzr"
 
-# Or copy manually to: C:\Users\YourUsername\.glzr\
+# Start GlazeWM and Zebar
 ```
-
-### Manual Installation
-1. Download/clone this repository
-2. Copy entire contents to `C:\Users\YourUsername\.glzr\`
-3. Start GlazeWM and Zebar
-4. Select desired theme in Zebar settings
 
 ## ⚙️ Configuration Details
 
-### Window Management Settings
-All themes are configured with:
-- **Height**: 42px (consistent across all themes)
-- **Dock to Edge**: Enabled, top edge
-- **Window Margin**: 0px for seamless integration
-- **Monitor Selection**: All monitors
+### Workspace Architecture
+- **Workspaces 1-4**: Primary monitor (external display) for main productivity
+- **"laptop" workspace**: Laptop monitor for auxiliary tasks like email
+- **Keybindings**: `alt+1-4` for primary workspaces, `alt+l` for laptop workspace
 
-### GlazeWM Configuration
-- **Dual-monitor optimized**: Primary monitor (workspaces 1-4), Laptop monitor (laptop workspace)
-- **Application routing**: Intelligent workspace assignment
-- **Purple theme**: Focused `#FB6060`, unfocused `#22272D`
-- **Transparency**: 85% opacity for non-focused windows
+### Visual Styling
+- **Zebar Height**: 42px with top docking
+- **GlazeWM Gaps**: 5px top, 12px others with DPI scaling
+- **Window Borders**: Blue focused (`#9bdbf9`), purple unfocused (`#7d5e8c`)
+- **Transparency**: 70% opacity for non-focused windows
+- **Corner Style**: Small rounded corners on Windows 11
 
-## 🎯 Theme-Specific Features
+### Application Routing
+Applications are automatically routed to appropriate workspaces:
+- **Development tools** → Workspace 1 (primary monitor)
+- **Email/communication** → Laptop workspace
+- **Creative/Office apps** → Workspace 1 (primary monitor)
 
-### Neobrutal Zebar
-- **CSS Variables**: Extensive theming system
-- **Power Controls**: Shutdown/restart integration
-- **Process Icons**: Dynamic application icons
-- **Styling Recipes**: Pre-configured aesthetics
+## 🔧 Development
 
-### Quiet Velvet
-- **Spotify API**: Real-time playback control (requires setup)
-- **Google Search**: Integrated search with workspace switching
-- **Settings Widget**: Dynamic widget visibility
-- **Config Required**: Edit `src/config.js` for API credentials
-
-### Ajay Professional
-- **System Integration**: Task Manager, Action Center, custom scripts
-- **Advanced Monitoring**: Network traffic, battery cycles, threshold alerts
-- **Shell Scripts**: VBS/PowerShell automation included
-- **Multi-Provider**: 11 integrated system providers
-
-## 📚 Documentation
-
-- **CLAUDE.md**: Project development history and configuration details
-- **ZEBAR_WIDGETS_REFERENCE.md**: Comprehensive widget reference
-- **CONFIG_INDEX.md**: Research and feature analysis
-
-## 🔧 Customization
-
-### Spotify Integration (Quiet Velvet)
-1. Create Spotify app at https://developer.spotify.com/dashboard
-2. Get refresh token at https://alecchen.dev/spotify-refresh-token/
-3. Update `quiet-velvet/src/config.js`:
-```javascript
-export default {
-    spotifyClientId: 'your-client-id',
-    spotifyClientSecret: 'your-client-secret',
-    spotifyRefreshToken: 'your-refresh-token',
-    explorerPath: 'C:\\Windows\\explorer.exe',
-    powershellPath: 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe'
-}
+### Theme Development Commands
+```bash
+# Zebar theme development (Svelte-based themes like personalized-zebar)
+cd zebar/personalized-zebar
+npm run dev          # Start development server with hot reload
+npm run build        # Build theme for production
+npm run preview      # Preview built theme
 ```
 
-### Theme Switching
-Update `zebar/settings.json` to point to desired theme:
-```json
-{
-  "themes": [
-    "theme-name/zpack.json"
-  ]
-}
-```
+### Testing Configuration Changes
+```bash
+# Check configuration syntax
+type glazewm\errors.log     # Check GlazeWM config parsing errors
+type zebar\errors.log       # Check Zebar widget/theme errors
 
-## 🎨 Available Themes
-- `personal-rose-pine-base/zpack.json`
-- `adriankarlen-rose-pine/zpack.json`
-- `neobrutal-zebar/zpack.json`
-- `quiet-velvet/zpack.json`
-- `ajay-professional/zpack.json`
+# Restart services (via keybindings in WM)
+# alt+shift+r - Restart GlazeWM to apply config changes
+```
 
 ## 📋 Requirements
 
 - **Windows 10/11**: Required for GlazeWM
-- **Node.js**: For rebuilding themes (optional)
-- **PowerShell**: For system scripts (Ajay Professional)
-- **Spotify Premium**: For playback controls (Quiet Velvet)
+- **Node.js**: For theme development (optional)
 
-## 🤝 Credits
+## 📝 Documentation
 
-- **Neobrutal**: [kylekce/neobrutal-zebar](https://github.com/kylekce/neobrutal-zebar)
-- **Quiet Velvet**: [ariafatah0711/zebar-glazewm](https://github.com/ariafatah0711/zebar-glazewm)
-- **Ajay Professional**: [Ajay-056/glazewm-config](https://github.com/Ajay-056/glazewm-config)
-- **Adrian Karlen**: [adriankarlen/rose-pine.zebar](https://github.com/adriankarlen/rose-pine.zebar)
-
-## 📝 License
-
-Themes retain their original licenses. Configuration modifications are provided as-is.
+- **CLAUDE.md**: Complete project development guide and configuration patterns
 
 ---
 
-*This configuration was curated and optimized for consistent Windows desktop integration with advanced Zebar theming capabilities.*
+*Optimized dual-monitor Windows desktop environment with GlazeWM tiling and personalized Zebar theming.*

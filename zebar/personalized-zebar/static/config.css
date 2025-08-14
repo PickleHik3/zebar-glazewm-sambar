@@ -36,6 +36,9 @@
   --volume-low: var(--rp-iris);
   --volume-medium: var(--rp-pine);
   --volume-high: var(--rp-rose);
+  --network-low: var(--rp-pine);
+  --network-medium: var(--rp-gold);
+  --network-high: var(--rp-love);
   --focused-process: var(--rp-text);
   --process: var(--rp-muted);
   --displayed: var(--rp-text);

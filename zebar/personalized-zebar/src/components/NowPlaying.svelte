@@ -18,11 +18,9 @@
     <div class="flex items-center gap-1 right-group-element">
       <Button
         iconClass={media.currentSession.isPlaying
-          ? "player-pause"
-          : "player-play"}
-        class={media.currentSession.isPlaying
-          ? "text-zb-now-playing"
-          : "text-zb-not-playing"}
+          ? "ti ti-player-pause text-zb-now-playing"
+          : "ti ti-player-play text-zb-not-playing"}
+        class="text-zb-media"
         noBg={true}
         callback={() =>
           media.togglePlayPause({ sessionId: media.currentSession!.sessionId })}
@@ -46,8 +44,8 @@
       <Group class="shrink-0">
         <div class="flex items-center gap-1 right-group-element">
           <Button
-            iconClass="player-play"
-            class="text-zb-now-playing"
+            iconClass="ti ti-player-play text-zb-now-playing"
+            class="text-zb-media"
             noBg={true}
             callback={() => {}}
           ></Button>

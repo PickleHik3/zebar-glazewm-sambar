@@ -67,6 +67,7 @@
         memory={memory!}
         glazewm={glazewm!}
         audio={audio!}
+        network={network!}
       />
     </Group>
   </div>
@@ -82,7 +83,6 @@
     <Group class="shrink-0">
       <RightGroup
         date={date!}
-        network={network!}
         weather={weather!}
       />
     </Group>
