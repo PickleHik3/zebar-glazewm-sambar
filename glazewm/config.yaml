@@ -280,10 +280,43 @@ binding_modes:
     keybindings:
       - commands: ["wm-disable-binding-mode --name pause"]
         bindings: ["escape", "enter"]
+
+  # Layout management mode for easy access to custom layouts
+  - name: "layout"
+    keybindings:
+      # Master layout (75/25 split)
+      - commands: ["resize --width +2%"]
+        bindings: ["m"]
+      
+      # Stack layout configuration
+      - commands: ["toggle-tiling-direction"]
+        bindings: ["s"]
+      
+      # Reset to default layout
+      - commands: ["resize --width 0%"]
+        bindings: ["r", "0"]
+      
+      # Toggle tiling direction
+      - commands: ["toggle-tiling-direction"]
+        bindings: ["t"]
+      
+      # Quick resize shortcuts
+      - commands: ["resize --width +25%"]
+        bindings: ["plus", "equals"]
+      - commands: ["resize --width -25%"]  
+        bindings: ["minus"]
+      
+      # Exit layout mode
+      - commands: ["wm-disable-binding-mode --name layout"]
+        bindings: ["escape", "enter"]
 keybindings:
   # Resize mode activation
   - commands: ["wm-enable-binding-mode --name resize"]
     bindings: ["alt+r"]
+
+  # Layout mode activation - Custom layout management
+  - commands: ["wm-enable-binding-mode --name layout"]
+    bindings: ["alt+shift+y"]
 
   # Disables window management and all other keybindings until escape/enter is pressed
   - commands: ["wm-enable-binding-mode --name pause"]
@@ -400,6 +433,37 @@ keybindings:
   - commands: ["move --workspace laptop", "focus --workspace laptop"]
     bindings: ["alt+shift+l"]
 
+  # ==========================================
+  # CUSTOM LAYOUT KEYBINDINGS
+  # ==========================================
+  
+  # Master Layout: Simple resize only - NO SCRIPTS
+  - commands: ["resize --width +2%"]
+    bindings: ["alt+shift+m"]
+  
+  # Stack Layout: Toggle tiling direction
+  - commands: ["toggle-tiling-direction"]
+    bindings: ["alt+shift+s"]
+  
+  # Reset Layout: Reset window sizes
+  - commands: ["resize --width 0%"]
+    bindings: ["alt+shift+0"]
+  
+  # Quick Master Window Resize (75% width)
+  - commands: ["resize --width +25%"]
+    bindings: ["alt+shift+bracketright"]
+  
+  # Quick Secondary Window Resize (25% width)
+  - commands: ["resize --width -25%"]
+    bindings: ["alt+shift+bracketleft"]
+  
+  # Toggle Tiling Direction for Layout Switching
+  - commands: ["toggle-tiling-direction"]
+    bindings: ["alt+shift+v"]
+
+  # ==========================================
+  # ORIGINAL KEYBINDINGS PRESERVED BELOW
+  # ==========================================
   # Missing keybindings from your personal config that weren't included:
   # Note: Terminal launch was commented out since you might prefer manual app opening
   # Note: Some workspace movements were simplified for your 4+laptop setup

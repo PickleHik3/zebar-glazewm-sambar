@@ -37,21 +37,20 @@ Local only (not in git):
 
 ## 🚀 Installation
 
-### Prerequisites
-1. **GlazeWM**: Download from [GitHub](https://github.com/glzr-io/glazewm/releases)
-2. **Zebar**: Download from [GitHub](https://github.com/glzr-io/zebar/releases)
+### **📦 [Complete Installation Guide](INSTALL.md)**
 
-### Quick Setup
-
+**Quick One-Command Install:**
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/glazewm-zebar-config.git
-
-# Copy to GlazeWM/Zebar directory (Windows)
-xcopy /E /I . "%USERPROFILE%\.glzr"
-
-# Start GlazeWM and Zebar
+cd C:\Users\%USERNAME%\ && git clone https://github.com/PickleHik3/zebar-glazewm-sambar.git && cd zebar-glazewm-sambar && mkdir "%USERPROFILE%\.glzr" 2>nul && xcopy /E /I /Y glazewm "%USERPROFILE%\.glzr\glazewm" && xcopy /E /I /Y zebar "%USERPROFILE%\.glzr\zebar" && copy CLAUDE.md "%USERPROFILE%\.glzr\" && copy README.md "%USERPROFILE%\.glzr\" && cd "%USERPROFILE%\.glzr\zebar\personalized-zebar" && npm install && npm run build && echo Installation Complete!
 ```
+
+### Prerequisites
+- **GlazeWM**: [Download here](https://github.com/glzr-io/glazewm/releases)
+- **Zebar**: [Download here](https://github.com/glzr-io/zebar/releases)
+- **Node.js**: [Download here](https://nodejs.org/) (Required for theme building)
+- **Git**: [Download here](https://git-scm.com/downloads)
+
+**⚠️ Important**: Simply copying files won't work! The Svelte theme needs `npm install` and `npm run build`. See [INSTALL.md](INSTALL.md) for details.
 
 ## ⚙️ Configuration Details
 
