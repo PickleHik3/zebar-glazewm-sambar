@@ -39,9 +39,6 @@ Local only (not in git):
 
 ### **📦 [Complete Installation Guide](INSTALL.md)**
 
-**Quick One-Command Install:**
-```bash
-cd C:\Users\%USERNAME%\ && git clone https://github.com/PickleHik3/zebar-glazewm-sambar.git && cd zebar-glazewm-sambar && mkdir "%USERPROFILE%\.glzr" 2>nul && xcopy /E /I /Y glazewm "%USERPROFILE%\.glzr\glazewm" && xcopy /E /I /Y zebar "%USERPROFILE%\.glzr\zebar" && copy CLAUDE.md "%USERPROFILE%\.glzr\" && copy README.md "%USERPROFILE%\.glzr\" && cd "%USERPROFILE%\.glzr\zebar\personalized-zebar" && npm install && npm run build && echo Installation Complete!
 ```
 
 ### Prerequisites
